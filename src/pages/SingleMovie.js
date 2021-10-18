@@ -43,11 +43,13 @@ const SingleMovie = () => {
 
   return (
     <section className="section film-section">
-     
-      <h2 className="section-title">{movie.Title}</h2>
+
+      <h2 className="section-title">{movie.Title}
+      <br/>
       <Link to="/" className="btn btn-primary">
         Back Home
-      </Link>
+      </Link></h2>
+      
       <div className="flexDiv">
       <div className="movie">
         <img src={movie.Poster} alt={movie.Title} />
