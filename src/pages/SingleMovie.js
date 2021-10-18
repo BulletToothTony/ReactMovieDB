@@ -43,10 +43,12 @@ const SingleMovie = () => {
 
   return (
     <section className="section film-section">
+     
+      <h2 className="section-title">{movie.Title}</h2>
       <Link to="/" className="btn btn-primary">
         Back Home
       </Link>
-      <h2 className="section-title">{movie.Title}</h2>
+      <div className="flexDiv">
       <div className="movie">
         <img src={movie.Poster} alt={movie.Title} />
         <div className="movie-info">
@@ -91,6 +93,7 @@ const SingleMovie = () => {
                 {movie.Year}
             </p>
         </div>
+      </div>
       </div>
       {/* box office, director, actors, plot, rated, imdbRating, imdbVotes, Released, Runtime, Year  */}
     </section>

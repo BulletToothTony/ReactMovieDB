@@ -16,15 +16,18 @@ const SearchForm = () => {
       e.preventDefault();
   }
   return (
-    <div>
-      <form onSubmit={formSubmit}>
+    <div className="search">
+      <form onSubmit={formSubmit} className="search-form">
+      <div className="search-div">
         <label htmlFor="movie">Search for a Movie...</label>
+        <br></br>
         <input
           type="text"
           id="movie"
           ref={searchValue}
           onChange={searchFilm}
         ></input>
+        </div>
       </form>
     </div>
   );
