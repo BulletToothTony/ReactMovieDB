@@ -1,7 +1,28 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
+import firebase from "../utils/firebase";
 
 const Navbar = () => {
+    const [movieList, setMovieList] = useState();
+
+    useEffect(() => {
+        const movieRef = firebase.database().ref("MovieDB");
+        movieRef.on('value', (snapshot) => {
+            // console.log(snapshot.val());
+            // console.log(Object.keys(snapshot).length)
+            const movies = snapshot.val();
+            const movieList = [];
+            for (let id in movies) {
+                movieList.push(movies[id]);
+            }
+            setMovieList(movieList);
+
+
+        });
+
+    }, [])
+
+
     return (
         <nav className="navbar">
             <div className="nav-centre">
@@ -22,7 +43,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <Link to="/watchlist">
-                        Watchlist
+                        Watchlist: {movieList.length}
                     </Link>
                 </li>
             </ul>
