@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import firebase from "../utils/firebase";
 
 const Navbar = () => {
-    const [movieList, setMovieList] = useState();
+    const [movieList, setMovieList] = useState([]);
 
     useEffect(() => {
         const movieRef = firebase.database().ref("MovieDB");

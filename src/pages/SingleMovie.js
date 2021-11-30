@@ -47,7 +47,9 @@ const SingleMovie = () => {
     const movieRef = firebase.database().ref("MovieDB");
     const movieNow = {
       name: movie.Title,
-      id: id
+      id: id,
+      img: movie.Poster,
+      watched: false,
     }
     movieRef.push(movieNow)
   };

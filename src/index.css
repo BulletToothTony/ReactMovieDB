@@ -183,3 +183,18 @@ input {
     width: 100%s;
   } */
 }
+
+.complete {
+  text-decoration: line-through;
+}
+
+.watchlistDiv {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 5rem 5rem 5rem;
+}
+
+.singledWatchDiv {
+  margin-right: 5rem;
+  max-width: 300px;
+}
