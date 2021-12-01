@@ -48,8 +48,10 @@ const Watchlistload = () => {
                 {/* <h3>{movie.id}</h3> */}
                 {/* <h3>{movie.name}</h3> */}
                 <img src={movie.img} alt={movie.name}></img>
-                <button onClick={() => watchedMovie(movie.id)}>Watched</button>
-                <button onClick={() => deleteMovie(movie.id)}>Remove</button>
+                <div className="buttonsWatchlist">
+                <button onClick={() => watchedMovie(movie.id)} className="buttonWatch">Watched</button>
+                <button onClick={() => deleteMovie(movie.id)} className="buttonWatch">Remove</button>
+                </div>
                 </div>
             )})}
         </div>

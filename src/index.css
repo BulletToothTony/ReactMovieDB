@@ -191,10 +191,26 @@ input {
 .watchlistDiv {
   display: flex;
   flex-direction: row;
-  margin: 2rem 5rem 5rem 5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* margin: 2rem 5rem 5rem 5rem; */
+  margin-left: 5rem;
 }
 
 .singledWatchDiv {
   margin-right: 5rem;
   max-width: 300px;
+}
+
+.buttonsWatchlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonWatch {
+  padding: 0.5rem;
+  margin: 0.25rem;
+  border-radius: 4px;
 }
