@@ -13,9 +13,15 @@ const Watchlistload = () => {
 
     // watched movie
     const watchedMovie = (id) => {
+        console.log(id)
         const movieRef = firebase.database().ref('MovieDB').child(id);
+        // if (movieRef.watched === true) {
+        //     movieRef.update({watched: false})
+        // } else if (movieRef.watched === false) {
+        //     movieRef.update({watched: true})
+        // }
         movieRef.update({
-            watched: !id.watched,
+            watched: !movieRef.watched,
         })
 
     }
